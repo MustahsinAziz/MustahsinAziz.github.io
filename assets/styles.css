@@ -48,6 +48,35 @@ h1, h2, h3, h4, h5, h6 {
 .brand{font-family: 'Montserrat', sans-serif;  font-weight: 700;  font-size: 1.4rem;  color: #fff;}
 .links a{margin-left:1rem;opacity:.95}
 .links a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px}
+
+/* Social icons (landing page) */
+.social{
+  display:flex;
+  gap:1rem;
+  justify-content:center;
+  align-items:center;
+  margin-top:0.75rem;
+}
+.social-btn{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#0b1620;                 
+  border:1px solid var(--ring);        
+  color:var(--text);
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+  transition:transform .15s ease, filter .15s ease, box-shadow .15s ease;
+}
+.social-btn i{ font-size:18px; line-height:1; }
+.social-btn:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.1);
+  box-shadow:0 10px 22px rgba(0,0,0,.32);
+}
+
+
 /* Hero */
 .hero{position:relative;min-height:100vh;background:url('../images/hero.jpg') center/cover no-repeat;display:grid;place-items:center}
 .hero-inner{position:relative;text-align:center;z-index:1;padding:2rem 1rem;max-width:900px}
