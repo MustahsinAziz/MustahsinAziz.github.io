@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Nav */
-.site-header{background:#263544;position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08)}
+.site-header{background:#263544; position:sticky; top:0; left:0; right:0; width:100%; z-index:50; border-bottom:1px solid rgba(255,255,255,.08);}
 .nav{max-width:1200px;margin:0 auto;padding:.85rem 1rem;display:flex;align-items:center;justify-content:space-between}
 .brand{font-family: 'Montserrat', sans-serif;  font-weight: 700;  font-size: 1.4rem;  color: #fff;}
 .links a{margin-left:1rem;opacity:.95}
