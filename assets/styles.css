@@ -20,7 +20,7 @@ a:hover{text-decoration:underline}
 /* Nav */
 .site-header{background:#263544;position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08)}
 .nav{max-width:1200px;margin:0 auto;padding:.85rem 1rem;display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:800;letter-spacing:.5px;color:#fff}
+.brand{font-family: 'Montserrat', sans-serif;  font-weight: 700;  font-size: 1.4rem;  color: #fff;}
 .links a{margin-left:1rem;opacity:.95}
 .links a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px}
 /* Hero */
