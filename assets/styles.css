@@ -22,7 +22,7 @@ a:hover{text-decoration:underline}
 .links a{margin-left:1rem;opacity:.95}
 .links a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px}
 /* Hero */
-.hero{position:relative;min-height:60vh;background:url('images/hero.jpg') center/cover no-repeat;display:grid;place-items:center}
+.hero{position:relative;min-height:60vh;background:url('../images/hero.jpg') center/cover no-repeat;display:grid;place-items:center}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6));}
 .hero-inner{position:relative;text-align:center;z-index:1;padding:2rem 1rem;max-width:900px}
 .hero .avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;margin:0 auto 1rem;border:4px solid rgba(255,255,255,.85)}
