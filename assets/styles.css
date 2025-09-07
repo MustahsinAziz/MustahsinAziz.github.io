@@ -57,13 +57,14 @@ h1, h2, h3, h4, h5, h6 {
 .hero h1{font-size:3rem;margin:.25rem 0 0}
 .hero .subtitle{opacity:.9;margin:.4rem 0 0}
 .hero .tagline{opacity:.9}
-.intro-panel{max-width:800px;margin:1.25rem auto 0;background:rgba(20,32,43,.85);padding:1rem 1.25rem;border-radius:12px;border:1px solid var(--ring)}
-.hero ..meta {
+.intro-panel{max-width:800px;margin:1.25rem auto 1.5rem;background:rgba(20,32,43,.85);padding:1rem 1.25rem;border-radius:12px;border:1px solid var(--ring)}
+.hero .meta {
   display:flex;
   justify-content:center;
   align-items:center;
   gap:.5rem;
   margin-top:0.75rem;
+  margin-bottom:1rem;
 }
 
 /* Social links row under location */
@@ -75,8 +76,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-top:1rem;
 }
 .social-btn{
-  width:48px;
-  height:48px;
+  width:56px;
+  height:56px;
   display:grid;
   place-items:center;
   border-radius:50%;
@@ -86,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow:0 6px 18px rgba(0,0,0,.25);
   transition:transform .15s ease, filter .15s ease, box-shadow .15s ease;
 }
-.social-btn i{ font-size:18px; line-height:1; }
+.social-btn i{ font-size:22px; line-height:1; }
 .social-btn:hover{
   transform:translateY(-2px);
   filter:brightness(1.1);
