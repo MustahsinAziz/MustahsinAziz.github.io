@@ -8,40 +8,103 @@
 </head>
 <body class="page-about">
 
-<header class="site-header">
-  <nav class="nav">
-    <a class="brand" href="index.html">Mustahsin Aziz</a>
-    <div class="links">
-      <a href="index.html">Home</a>
-      <a href="cv.html">CV</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="about.html">About</a>
-      <a href="blogs.html">Blogs</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
+  <!-- Page-wide overlay wrapper (enables scroll darkening) -->
+  <div class="page-overlay" id="pageOverlay">
 
-<main>
-  <section class="banner">
-    <div class="about-panel">
-      <div class="about-box">
-        <h1>About Me</h1>
-        <p>Hello! I’m Mustahsin‑Ul Aziz, an Environmental Economist and development practitioner currently pursuing a Ph.D. at West Virginia University. My work focuses on practical solutions to complex socio‑environmental challenges using data science, remote sensing, and policy analysis.</p>
-        <p>I’ve led randomized trials, contributed to multi‑hundred‑million‑dollar projects, and now study how environmental quality shapes labor markets and public health.</p>
-        <p>Outside research, you’ll find me cooking biryani, making music, and exploring trails.</p>
+    <!-- Keep your global nav -->
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="index.html">Mustahsin Aziz</a>
+        <div class="links">
+          <a href="cv.html">CV</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="blogs.html">Blogs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About text panel (right side), matching personal.html -->
+      <section class="about-section">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>Hello there! I’m Mustahsin-Ul Aziz, an enthusiastic development practitioner and environmental economist currently pursuing a Ph.D. at West Virginia University. My work is driven by a passion for solving complex socio-economic and environmental challenges. With over eight years of experience spanning roles at the World Bank, research initiatives, and teaching, I’ve made strides in tackling issues related to sustainable development, education policy, and environmental health.</p>
+          <p>My journey in research and policy started in Bangladesh, where I helped design and implement educational programs and environmental interventions. A few of my proudest accomplishments include leading a randomized control trial that successfully reduced tobacco consumption in rural areas and contributing to a $700 million higher education project at the World Bank. Now, as a Ph.D. student, I’m exploring how environmental quality affects education outcomes and working on green infrastructure projects to promote sustainability.</p>
+          <p>I’ve managed multi-million dollar projects, led workshops on using AI in research, and even contributed to shaping education policies that impact thousands. On the academic side, my research leverages remote sensing and advanced econometrics to explore how environmental factors influence social outcomes. And when I’m not crunching numbers, I’m usually cooking up new ideas to make a meaningful difference.</p>
+          <p>When I’m not diving into data or analyzing spatial patterns, you’ll probably find me jamming out on my bass guitar, whipping up a spicy new dish in the kitchen, or getting lost in the immersive world of video games. I love taking long, leisurely walks by the river, letting my thoughts flow as smoothly as the water beside me. And music? Well, it's the soundtrack to my life—whether I'm working, cooking, or just unwinding.</p>
+          <p>If you’re interested in how I blend data science with real-world problem-solving—or just want to talk about the best way to cook biryani—I’m always up for a chat!</p>
+        </div>
+      </section>
+
+      <!-- Photo grid + hover captions (same layout/behavior) -->
+      <section class="photo-gallery">
+        <div class="gallery-item">
+          <img src="assets/personal/IMG_6513.jpg" alt="My Family">
+          <div class="caption-box"><div class="caption-text">My Family</div></div>
+        </div>
+
+        <div class="gallery-item tall">
+          <img src="assets/personal/IMG_7236.jpg" alt="Post Presentation">
+          <div class="caption-box"><div class="caption-text">Post Presentation</div></div>
+        </div>
+
+        <div class="gallery-item tall">
+          <img src="assets/personal/IMG_6897.jpg" alt="Fish Dopiaza">
+          <div class="caption-box"><div class="caption-text">Fish Dopiaza</div></div>
+        </div>
+
+        <div class="gallery-item tall">
+          <img src="assets/personal/top1.jpg" alt="Doha">
+          <div class="caption-box"><div class="caption-text">Doha</div></div>
+        </div>
+
+        <div class="gallery-item tall">
+          <img src="assets/personal/IMG_6599.jpg" alt="Doha">
+          <div class="caption-box"><div class="caption-text">Doha</div></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/personal/IMG_7169.jpg" alt="Morgantown">
+          <div class="caption-box"><div class="caption-text">Morgantown</div></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/personal/personal1.jpeg" alt="Bax and Bass">
+          <div class="caption-box"><div class="caption-text">Bax and Bass</div></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/personal/personal2.jpeg" alt="Bax and Finn">
+          <div class="caption-box"><div class="caption-text">Bax and Finn</div></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/personal/personal3.jpeg" alt="Finn">
+          <div class="caption-box"><div class="caption-text">Finn!</div></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Keep your global footer -->
+    <footer class="site-footer">
+      <div class="inner">
+        <p class="small">© <span id="year"></span> Mustahsin Aziz. All rights reserved.</p>
+        <p class="small">Photo credits: background by Unsplash</p>
       </div>
-    </div>
-  </section>
-</main>
+    </footer>
 
-<footer class="site-footer">
-  <div class="inner">
-    <p class="small">© <span id="year"></span> Mustahsin Aziz. All rights reserved.</p>
-    <p class="small">Photo credits: background by Unsplash</p>
-  </div>
-</footer>
-<script src="assets/site.js"></script>
+  </div><!-- /.page-overlay -->
 
+  <!-- Page-specific scroll effect: darken overlay slightly when scrolled -->
+  <script>
+    const pageOverlay = document.getElementById('pageOverlay');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) pageOverlay.classList.add('dark-overlay');
+      else pageOverlay.classList.remove('dark-overlay');
+    });
+  </script>
+  <script src="assets/site.js"></script>
 </body>
 </html>
