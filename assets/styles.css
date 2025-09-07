@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Use a dedicated background on about page */
 .page-about{
-  background: url('../assets/personal/IMG_5571.jpg') center/cover fixed no-repeat;
+  background: url('../assets/personal/IMG_5571.jpg') center 80px /cover fixed no-repeat;
 }
 
 /* Overlay that slightly darkens the page; gets darker when scrolled */
