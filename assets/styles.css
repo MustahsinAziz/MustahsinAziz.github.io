@@ -145,11 +145,99 @@ h1, h2, h3, h4, h5, h6 {
 .pub-citation{margin:0;color:var(--muted);font-style:italic}
 .pub-abstract{margin:.25rem 0 .75rem;color:#d7e2ec}
 .pub-link{margin-top:auto;font-weight:700}
-/* About overlay */
-.banner{position:relative;min-height:70vh;background:url('images/about-hero.jpg') center/cover no-repeat}
-.banner::after{content:"";position:absolute;inset:0;background:var(--bg-overlay)}
-.about-panel{position:relative;max-width:900px;margin:0 auto;padding:2rem 1rem;display:flex;justify-content:flex-end}
-.about-box{background:rgba(20,32,43,.85);border:1px solid var(--ring);border-radius:14px;padding:1.25rem;max-width:780px}
+
+/* ========== About page (match personal.html) ========== */
+
+/* Use a dedicated background on about page */
+.page-about{
+  background: url('assets/personal/IMG_5571.jpg') center/cover fixed no-repeat;
+}
+
+/* Overlay that slightly darkens the page; gets darker when scrolled */
+.page-overlay{
+  min-height:100%;
+  background: rgba(0,0,0,0.30);
+  display:flex;
+  flex-direction:column;
+  transition: background .3s ease;
+}
+.page-overlay.dark-overlay{
+  background: rgba(0,0,0,0.90);
+}
+
+/* Right-aligned about text panel with feathered gradient */
+.about-section{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  padding:60px 20px;
+  margin:20px;
+}
+.about-text{
+  max-width:800px;
+  padding:20px;
+  background: linear-gradient(to right, rgba(44,62,80,0.20), rgba(44,62,80,0.80));
+  text-align:left;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,.06);
+}
+.about-text h2{
+  text-align:center;
+  font-size:32px;
+  margin:0 0 20px;
+}
+.about-text p{
+  font-size:16px;
+  line-height:1.6;
+  margin:0 0 15px;
+}
+
+/* Photo gallery with hover zoom + caption */
+.photo-gallery{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  margin:30px;
+}
+.gallery-item{
+  position:relative;
+  width:300px;
+  height:200px;
+  overflow:hidden;
+  border-radius:8px;
+  cursor:pointer;
+  border:1px solid rgba(255,255,255,.06);
+  box-shadow:0 10px 24px rgba(0,0,0,.2);
+}
+.gallery-item.tall{ height:400px; }
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .3s ease-in-out;
+}
+.gallery-item:hover img{ transform: scale(1.1); }
+
+/* Caption overlay on hover */
+.caption-box{
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height:50%;
+  background: rgba(0,0,0,0.70);
+  opacity:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition: opacity .25s ease-in-out;
+}
+.gallery-item:hover .caption-box{ opacity:1; }
+.caption-text{ font-size:16px; color:#fff; text-align:center; }
+
+/* Make site header and footer sit above overlay effect properly */
+.site-header, .site-footer{ position:relative; z-index:2; }
+
+
 /* Blogs */
 .post-grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .post-card{background:var(--card);border:1px solid var(--ring);border-radius:14px;overflow:hidden}
