@@ -1,0 +1,1 @@
+Put your hero.jpg and about-hero.jpg here. They are used as full-bleed backgrounds.

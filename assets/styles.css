@@ -1,0 +1,73 @@
+
+:root{
+  --bg:#0f1419;
+  --bg-overlay: rgba(0,0,0,.45);
+  --panel:#14202b;
+  --card:#1a232d;
+  --text:#e8eef5;
+  --muted:#aab7c4;
+  --link:#7bc4ff;
+  --accent:#58a6ff;
+  --ring:rgba(255,255,255,.06);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif}
+img{max-width:100%;display:block}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+/* Nav */
+.site-header{background:#263544;position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{max-width:1200px;margin:0 auto;padding:.85rem 1rem;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:800;letter-spacing:.5px;color:#fff}
+.links a{margin-left:1rem;opacity:.95}
+.links a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px}
+/* Hero */
+.hero{position:relative;min-height:60vh;background:url('images/hero.jpg') center/cover no-repeat;display:grid;place-items:center}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6));}
+.hero-inner{position:relative;text-align:center;z-index:1;padding:2rem 1rem;max-width:900px}
+.hero .avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;margin:0 auto 1rem;border:4px solid rgba(255,255,255,.85)}
+.hero h1{font-size:3rem;margin:.25rem 0 0}
+.hero .subtitle{opacity:.9;margin:.4rem 0 0}
+.hero .tagline{opacity:.9}
+.intro-panel{max-width:800px;margin:1.25rem auto 0;background:rgba(20,32,43,.85);padding:1rem 1.25rem;border-radius:12px;border:1px solid var(--ring)}
+.hero .meta{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:.75rem;opacity:.9}
+/* Sections */
+.section{max-width:1100px;margin:3rem auto;padding:0 1rem}
+.section h1,.section h2{margin:0 0 1rem}
+/* Cards grid */
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.card{background:var(--card);padding:1.25rem;border-radius:14px;border:1px solid var(--ring);box-shadow:0 10px 24px var(--ring)}
+.card h3{margin:.15rem 0 .35rem;font-size:1.15rem}
+.muted{color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:#06111a;padding:.65rem 1rem;border-radius:10px;font-weight:700;box-shadow:0 6px 18px rgba(88,166,255,.2)}
+.btn:hover{text-decoration:none;filter:brightness(1.05)}
+.link{font-weight:600}
+/* Publications */
+.pub-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+.pub-card{background:var(--card);padding:1.25rem;border-radius:14px;border:1px solid var(--ring);display:flex;flex-direction:column;gap:.5rem}
+.pub-title{margin:0;font-size:1.05rem}
+.pub-citation{margin:0;color:var(--muted);font-style:italic}
+.pub-abstract{margin:.25rem 0 .75rem;color:#d7e2ec}
+.pub-link{margin-top:auto;font-weight:700}
+/* About overlay */
+.banner{position:relative;min-height:70vh;background:url('images/about-hero.jpg') center/cover no-repeat}
+.banner::after{content:"";position:absolute;inset:0;background:var(--bg-overlay)}
+.about-panel{position:relative;max-width:900px;margin:0 auto;padding:2rem 1rem;display:flex;justify-content:flex-end}
+.about-box{background:rgba(20,32,43,.85);border:1px solid var(--ring);border-radius:14px;padding:1.25rem;max-width:780px}
+/* Blogs */
+.post-grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.post-card{background:var(--card);border:1px solid var(--ring);border-radius:14px;overflow:hidden}
+.post-media{aspect-ratio:16/9;background:#0b1620}
+.post-body{padding:1rem}
+/* Contact */
+.contact-list{list-style:none;padding:0;margin:2rem 0;display:grid;gap:.5rem;justify-items:center}
+.contact-list li{opacity:.95}
+.icon-row{display:flex;gap:1.25rem;justify-content:center;align-items:center;margin-top:1rem}
+.icon{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#0b1620;border:1px solid var(--ring)}
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,.08);background:#263544;margin-top:3rem}
+.site-footer .inner{max-width:1200px;margin:0 auto;padding:1rem;color:#d0d9e2;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
+.small{font-size:.9rem;opacity:.85}
+@media (max-width:640px){
+  .hero h1{font-size:2.2rem}
+}
