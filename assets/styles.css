@@ -272,8 +272,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Blogs */
 .post-grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.post-card{background:var(--card);border:1px solid var(--ring);border-radius:14px;overflow:hidden}
-.post-media{aspect-ratio:16/9;background:#0b1620}
+.post-card {
+  background: rgba(20,32,43,.85);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.05);
+  max-width: 500px;       /* controls overall card size */
+  margin: 1rem auto;      /* center cards */
+}
+
+.post-media img {
+  width: 100%;
+  height: 250px;          /* adjust to desired preview height */
+  object-fit: cover;      /* crop instead of stretching */
+  display: block;
+}
 .post-body{padding:1rem}
 /* Contact */
 .contact-list{list-style:none;padding:0;margin:2rem 0;display:grid;gap:.5rem;justify-items:center}
