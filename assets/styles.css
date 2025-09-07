@@ -20,10 +20,33 @@ body {
   color: var(--text);
 }
 
-.hero {
+/* Landing page hero keeps its own image */
+.hero{
   min-height:100vh;
   background:url('../images/hero.jpg') center/cover no-repeat;
 }
+
+/* Other pages: bring back photo backgrounds */
+.page-portfolio{
+  background:url('../images/hero.jpg') center/cover fixed no-repeat;
+}
+
+.page-about{
+  background:url('../images/about-hero.jpg') center/cover fixed no-repeat;
+}
+
+.page-blogs{
+  background:url('../images/hero.jpg') center/cover fixed no-repeat;
+}
+
+.page-contact{
+  background:url('../images/hero.jpg') center/cover fixed no-repeat;
+}
+
+.page-cv{
+  background:url('../images/hero.jpg') center/cover fixed no-repeat;
+}
+
 html, body {
   margin:0;
   padding:0;
