@@ -18,6 +18,26 @@ body{min-height:100%; background: url('../images/hero.jpg') center/cover fixed n
 img{max-width:100%;display:block}
 a{color:var(--link);text-decoration:none}
 a:hover{text-decoration:underline}
+
+/* Typography setup */
+/* Global body font (system default, same as before) */
+body, button, input, select, textarea {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Only brand name uses Montserrat */
+.brand {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+/* Headings should stay consistent with body font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+}
+
 /* Nav */
 .site-header{background:#263544;position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08)}
 .nav{max-width:1200px;margin:0 auto;padding:.85rem 1rem;display:flex;align-items:center;justify-content:space-between}
