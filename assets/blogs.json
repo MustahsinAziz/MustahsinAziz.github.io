@@ -1,5 +1,4 @@
 [
-
   {
     "title": "COVID-19 boosts digitization of higher education in Bangladesh",
     "source": "End Poverty in South Asia — The World Bank",
@@ -7,15 +6,13 @@
     "category": "wbg",
     "thumbnail": "https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/oneline_education-bd1.jpg?qlt=90&hei=630&wid=1200&fit=hfit",
     "url": "https://blogs.worldbank.org/en/endpovertyinsouthasia/covid-19-boosts-digitization-higher-education-bangladesh"
-  }
-
+  },
   {
     "title": "The Economics of Clean Water in Rural Appalachia",
     "source": "Charleston Gazette-Mail",
     "date": "2024-08-02",
     "category": "articles",
     "thumbnail": "https://www.wvgazettemail.com/path/to/opengraph.jpg",
-    "excerpt": "Investing in small water systems delivers big public-health returns.",
     "url": "https://www.wvgazettemail.com/.../op-ed"
   },
   {
@@ -24,7 +21,6 @@
     "date": "2024-07-21",
     "category": "mentions",
     "thumbnail": "https://wvpublic.org/path/to/og-image.jpg",
-    "excerpt": "A statewide segment on using AI and imagery for planning.",
     "url": "https://wvpublic.org/.../story"
   }
 ]
