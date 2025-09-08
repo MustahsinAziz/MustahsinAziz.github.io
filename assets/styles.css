@@ -117,11 +117,11 @@ a:hover{ text-decoration:underline }
 .chip--sm{ font-size:.92rem; padding:.32rem .68rem }
 
 /* Specialty chips: more opaque for legibility */
-.chip.ghost{
-  background:rgba(255,255,255,.20);
-  border:1px solid rgba(255,255,255,.28);
-  color:#fff;
-  box-shadow:0 6px 16px rgba(0,0,0,.28);
+.chip.ghost {
+  background: rgba(255,255,255,.35);   /* was .20 */
+  border: 1px solid rgba(255,255,255,.45);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,.3);
 }
 
 /* Specialty label */
