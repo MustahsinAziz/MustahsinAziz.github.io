@@ -338,30 +338,33 @@ html{ scroll-behavior:smooth }
 .icon{ width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:#0b1620; border:1px solid var(--ring) }
 
 /* Tabs */
-.blog-tabs{
+/* Full-width sticky sub-nav for Blogs (spans viewport) */
+.blog-tabs {
   position: sticky;
-  top: 56px;          /* match .site-header height */
-  z-index: 45;
-  background: rgba(20,32,43,.92);
+  top: 56px;                     /* height of .site-header */
+  z-index: 100;                  /* make sure it stays above content */
+  background: rgba(20,32,43,0.95);
   backdrop-filter: blur(4px);
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  padding: .55rem 0;
-  margin-bottom: .75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 0.55rem 0;
 }
 
+  /* If the inner wrapper is missing, this still centers the buttons */
+  display: flex;
+  justify-content: center;
+}
+
+/* Center the buttons inside the max page width */
 .blog-tabs .tabs-inner{
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
+
   display: flex;
-  justify-content: center;
+  justify-content: center !important;  /* force centering */
   align-items: center;
   gap: .5rem;
-}
-  /* If the inner wrapper is missing, this still centers the buttons */
-  display: flex;
-  justify-content: center;
 }
 
 
