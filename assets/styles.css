@@ -104,6 +104,45 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom:2rem;
 }
 
+/* Sub-nav (portfolio section bar) */
+.subnav{
+  position: sticky;               /* sticks beneath the main header */
+  top: 56px;                      /* match your header height */
+  z-index: 40;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  background: rgba(20,32,43,.92);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  padding: .6rem 1rem;
+}
+
+/* Links */
+.subnav a{
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  padding: .35rem .75rem;
+  border-radius: 999px;
+  opacity: .9;
+  transition: background .15s ease, opacity .15s ease;
+}
+.subnav a:hover{ background: rgba(255,255,255,.06); opacity: 1; }
+
+/* Active link (JS adds .is-active) */
+.subnav a.is-active{
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.18);
+}
+
+/* Smooth scrolling + compensate for sticky header/subnav covering anchors */
+html{ scroll-behavior: smooth; }
+.anchor-section{ scroll-margin-top: 110px; } /* header (≈56) + subnav (≈44) + buffer */
+
+
+
+
 /* Social links row under location */
 .social {
   display:flex;
