@@ -1,50 +1,52 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Blogs — Mustahsin Aziz</title>
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blogs & Media — Mustahsin Aziz</title>
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body class="page-blogs">
-
-<header class="site-header">
-  <nav class="nav">
-    <a class="brand" href="index.html">Mustahsin Aziz</a>
-    <div class="links">
-      <a href="cv.html">CV</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="about.html">About</a>
-      <a href="blogs.html">Blogs</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
-
-<main class="section">
-  <h1>Recent Blog Posts</h1>
-  <div class="post-grid">
-    <article class="post-card">
-      <div class="post-media"><img src="assets/blogs/gsv_mosaic_ai_labeled.jpg" alt="Projects preview"></div>
-      <div class="post-body">
-        <h3>UrbanEye</h3>
-        <p class="muted">UrbanEye is an open-source Python toolkit that uses Google Street View imagery and computer vision to measure street-level greenery and public space features. It provides scalable, reproducible metrics of the lived urban environment for research and policy analysis.</p>
-        <a class="link" href="assets/blogs/Aziz_urban_eye_blog1_1.pdf">Read →</a>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">Mustahsin Aziz</a>
+      <div class="links">
+        <a href="cv.html">CV</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="blogs.html" aria-current="page">Blogs</a>
+        <a href="contact.html">Contact</a>
       </div>
-    </article>
-  </div>
-</main>
+    </nav>
+  </header>
 
-<footer class="site-footer">
-  <div class="inner">
-    <p class="small">© <span id="year"></span> Mustahsin Aziz. All rights reserved.</p>
-    <p class="small">Photo credits: background by Unsplash</p>
-  </div>
-</footer>
-<script src="assets/site.js"></script>
+  <main>
+    <section class="section">
+      <h1>Blogs & Media</h1>
+      <p class="muted">Writing and coverage across organizations and outlets.</p>
+    </section>
 
+    <!-- Tabs -->
+    <div class="blog-tabs" role="tablist" aria-label="Filter articles">
+      <button class="tab-btn is-active" role="tab" data-filter="all" aria-selected="true">All</button>
+      <button class="tab-btn" role="tab" data-filter="wbg">World Bank Posts</button>
+      <button class="tab-btn" role="tab" data-filter="articles">Op-Eds & Articles</button>
+      <button class="tab-btn" role="tab" data-filter="mentions">Media Mentions</button>
+    </div>
+
+    <!-- Grid container; JS will render cards here -->
+    <section class="section">
+      <div id="blog-grid" class="article-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner small">
+      <span>© 2025 Mustahsin Aziz. All rights reserved.</span>
+      <span>Photo credits: background by Unsplash</span>
+    </div>
+  </footer>
+
+  <script src="assets/blogs.js"></script>
 </body>
 </html>
