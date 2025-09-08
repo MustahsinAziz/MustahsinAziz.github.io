@@ -131,7 +131,7 @@ a:hover{ text-decoration:underline }
 }
 
 /* Meta (location + icons) */
-.meta{ margin-top:.8rem }
+.meta{ margin-top:.12rem }
 .hero .meta{
   display:flex; justify-content:center; align-items:center;
   gap:.5rem; margin-top:.75rem; margin-bottom:2rem;
