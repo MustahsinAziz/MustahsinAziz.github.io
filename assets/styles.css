@@ -98,13 +98,58 @@ h1, h2, h3, h4, h5, h6 {
   color: #e0e0e0;       /* soft gray so it complements */
   margin-top: 0.5rem;
 }
-.hero-tagline {
-  font-weight: 400;
-  font-size: 1.1rem;
-  color: #ffffff;       /* pure white for contrast */
-  margin-top: 0.25rem;
+.hero-tags,
+.hero-specialties{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem .6rem;
+  justify-content:center;
+  align-items:center;
+  margin-top:.6rem;
 }
-.intro-panel{max-width:800px;margin:1.25rem auto 1.5rem;background:rgba(20,32,43,.85);padding:1rem 1.25rem;border-radius:12px;border:1px solid var(--ring)}
+
+/* Chips */
+.chip{
+  display:inline-flex;
+  align-items:center;
+  padding:.35rem .7rem;
+  border-radius:999px;
+  font-size:.95rem;
+  font-weight:600;
+  background: rgba(20,32,43,.9);
+  border:1px solid rgba(255,255,255,.12);
+  color:#eaf2ff;
+  box-shadow:0 6px 16px rgba(0,0,0,.25);
+}
+.chip.ghost{
+  background: rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.18);
+  color:#ffffff;
+}
+
+/* "Research Specialty:" label (only this row shows a title) */
+.hero-specialties .label{
+  margin-right:.4rem;
+  font-size:.95rem;
+  font-weight:700;
+  letter-spacing:.02em;
+  color:#cfe2ff;
+  opacity:.95;
+}
+
+/* Designation lines */
+.hero-designation{
+  margin:.5rem 0 0;
+  text-align:center;
+  font-size:1.05rem;
+  color:#ffffff;
+  text-shadow:0 1px 2px rgba(0,0,0,.4);
+}
+
+/* spacing harmony with your intro panel + location */
+.intro-panel{ margin-top:1rem; }
+.meta{ margin-top:.8rem; }
+
 .hero .meta {
   display:flex;
   justify-content:center;
