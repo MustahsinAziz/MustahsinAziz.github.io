@@ -337,34 +337,48 @@ html{ scroll-behavior:smooth }
 .icon-row{ display:flex; gap:1.25rem; justify-content:center; align-items:center; margin-top:1rem }
 .icon{ width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:#0b1620; border:1px solid var(--ring) }
 
-/* ---------- Footer ---------- */
-.site-footer{
-  border-top:1px solid rgba(255,255,255,.08);
-  background:#263544; margin-top:3rem;
-}
-.site-footer .inner{
-  max-width:1200px; margin:0 auto; padding:1rem; color:#d0d9e2;
-  display:flex; justify-content:space-between; flex-wrap:wrap; gap:.75rem;
-}
-.small{ font-size:.9rem; opacity:.85 }
-
-
 /* Tabs */
+/* Full-width sticky sub-nav for Blogs */
 .blog-tabs{
-  position:sticky; top:56px; z-index:40;    /* below main header */
-  display:flex; gap:.5rem; justify-content:center;
-  background:rgba(20,32,43,.85);
-  padding:.5rem 1rem; border-bottom:1px solid rgba(255,255,255,.08);
+  position: sticky;
+  top: 56px;               /* match your header height */
+  z-index: 45;
+  /* stretch to the viewport even if nested in a wrapper */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  background: rgba(20,32,43,.92);
   backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  padding: .55rem 0;       /* vertical padding only */
+  margin-bottom: .75rem;   /* adds space between bar and the title */
 }
+
+/* constrain the buttons to your page width and center them */
+.blog-tabs .tabs-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+}
+
+/* buttons (keep your existing styles, repeated here for clarity) */
 .tab-btn{
-  appearance:none; border:1px solid rgba(255,255,255,.12);
-  background:rgba(12,18,24,.75); color:#eaf2ff;
-  font-weight:600; padding:.45rem .9rem; border-radius:999px;
-  cursor:pointer; transition:filter .15s ease, background .15s ease;
+  appearance: none;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(12,18,24,.75);
+  color: #eaf2ff;
+  font-weight: 600;
+  padding: .45rem .9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: filter .15s ease, background .15s ease;
 }
-.tab-btn:hover{ filter:brightness(1.08) }
-.tab-btn.is-active{ background:rgba(255,255,255,.12) }
+.tab-btn:hover{ filter: brightness(1.08) }
+.tab-btn.is-active{ background: rgba(255,255,255,.12) }
 
 /* Articles grid & cards */
 .article-grid{
@@ -412,6 +426,18 @@ html{ scroll-behavior:smooth }
 .article-link{
   font-weight:700;
 }
+
+
+/* ---------- Footer ---------- */
+.site-footer{
+  border-top:1px solid rgba(255,255,255,.08);
+  background:#263544; margin-top:3rem;
+}
+.site-footer .inner{
+  max-width:1200px; margin:0 auto; padding:1rem; color:#d0d9e2;
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:.75rem;
+}
+.small{ font-size:.9rem; opacity:.85 }
 
 
 
