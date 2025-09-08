@@ -338,57 +338,32 @@ html{ scroll-behavior:smooth }
 .icon{ width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:#0b1620; border:1px solid var(--ring) }
 
 /* Tabs */
-/* Full-width sticky sub-nav for Blogs */
 .blog-tabs{
   position: sticky;
-  top: 56px;               /* match your header height */
+  top: 56px;          /* match .site-header height */
   z-index: 45;
-  /* stretch to the viewport even if nested in a wrapper */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  background: rgba(20,32,43,.92);
-  backdrop-filter: blur(4px);
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  padding: .55rem 0;       /* vertical padding only */
-  margin-bottom: .75rem;   /* adds space between bar and the title */
-}
-
-/* constrain the buttons to your page width and center them */
-/* Full-width sticky sub-nav for Blogs (spans viewport) */
-.blog-tabs{
-  position: sticky;
-  top: 56px;                  /* your header height */
-  z-index: 45;
-
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
   background: rgba(20,32,43,.92);
   backdrop-filter: blur(4px);
   border-bottom: 1px solid rgba(255,255,255,.08);
   padding: .55rem 0;
   margin-bottom: .75rem;
-
-  /* If the inner wrapper is missing, this still centers the buttons */
-  display: flex;
-  justify-content: center;
 }
 
-/* Center the buttons inside the max page width */
 .blog-tabs .tabs-inner{
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
-
   display: flex;
-  justify-content: center !important;  /* force centering */
+  justify-content: center;
   align-items: center;
   gap: .5rem;
 }
+  /* If the inner wrapper is missing, this still centers the buttons */
+  display: flex;
+  justify-content: center;
+}
+
 
 
 /* buttons (keep your existing styles, repeated here for clarity) */
