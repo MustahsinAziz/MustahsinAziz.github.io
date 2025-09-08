@@ -2,25 +2,66 @@
   {
     "title": "COVID-19 boosts digitization of higher education in Bangladesh",
     "source": "End Poverty in South Asia — The World Bank",
-    "date": "2020-08-01",
+    "date": "2020-08-05",
     "category": "wbg",
     "thumbnail": "https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/oneline_education-bd1.jpg?qlt=90&hei=630&wid=1200&fit=hfit",
     "url": "https://blogs.worldbank.org/en/endpovertyinsouthasia/covid-19-boosts-digitization-higher-education-bangladesh"
   },
   {
-    "title": "The Economics of Clean Water in Rural Appalachia",
-    "source": "Charleston Gazette-Mail",
-    "date": "2024-08-02",
-    "category": "articles",
-    "thumbnail": "https://www.wvgazettemail.com/path/to/opengraph.jpg",
-    "url": "https://www.wvgazettemail.com/.../op-ed"
+    "title": "Bangladesh’s unlikely inventor creates face shields to tackle coronavirus",
+    "source": "End Poverty in South Asia — The World Bank",
+    "date": "2020-05-19",
+    "category": "wbg",
+    "thumbnail": "https://s7d1.scene7.com/is/image/wbcollab/bangladesh-covid-face-shields-inventor-3jpg?qlt=90&hei=630&wid=1200&fit=hfit",
+    "url": "https://blogs.worldbank.org/en/endpovertyinsouthasia/bangladeshs-unlikely-inventor-creates-face-shields-tackle-coronavirus"
   },
   {
-    "title": "Research on UrbanEye featured on WV Public Radio",
-    "source": "WVPB",
-    "date": "2024-07-21",
+    "title": "Skilling up Bangladesh’s youth for a changing job market",
+    "source": "End Poverty in South Asia — The World Bank",
+    "date": "2019-10-07",
+    "category": "wbg",
+    "thumbnail": "https://s7d1.scene7.com/is/image/wbcollab/jobs-1?qlt=90&hei=630&wid=1200&fit=hfit",
+    "url": "https://blogs.worldbank.org/en/endpovertyinsouthasia/skilling-bangladeshs-youth-changing-job-market"
+  },
+   {
+    "title": "ICT skills training critical for Bangladeshi youth",
+    "source": "End Poverty in South Asia — The World Bank",
+    "date": "2019-05-06",
+    "category": "wbg",
+    "thumbnail": "https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/c5_hoel_110202_dsc_5622.jpg?qlt=90&hei=630&wid=1200&fit=hfit",
+    "url": "https://blogs.worldbank.org/en/endpovertyinsouthasia/ict-skills-training-critical-bangladeshi-youth"
+  },
+  {
+    "title": "Skills competition inspires youth in Bangladesh",
+    "source": "End Poverty in South Asia — The World Bank",
+    "date": "2019-02-17",
+    "category": "wbg",
+    "thumbnail": "https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/social-sharing-default.png?qlt=90&hei=630&wid=1200&fit=hfit",
+    "url": "https://blogs.worldbank.org/en/endpovertyinsouthasia/skills-competition-inspires-youth-bangladesh"
+  },
+  {
+    "title": "In Bangladesh, building the skills for the 4th Industrial Revolution",
+    "source": "End Poverty in South Asia — The World Bank",
+    "date": "2018-06-11",
+    "category": "wbg",
+    "thumbnail": "https://blogs.worldbank.org/content/content/dam/sites/blogs/img/detail/mgr/infographic3.jpg?qlt=90&hei=630&wid=1200&fit=hfit",
+    "url": "https://blogs.worldbank.org/en/endpovertyinsouthasia/bangladesh-building-skills-4th-industrial-revolution"
+  },
+  {
+    "title": "WVU research on school absences links dirty air to empty desks",
+    "source": "WVU Today",
+    "date": "2025-08-12",
     "category": "mentions",
-    "thumbnail": "https://wvpublic.org/path/to/og-image.jpg",
-    "url": "https://wvpublic.org/.../story"
-  }
+    "thumbnail": "https://wvutoday.wvu.edu/files/ce3bb443-527b-454c-8644-99664c7b43d6/1200x800?cb=09aa46b09bcc5444e72d69f991d28df9",
+    "url": "https://wvutoday.wvu.edu/stories/2025/08/12/wvu-research-on-school-absences-links-dirty-air-to-empty-desks"
+  },
+   {
+    "title": "Bangladesh’s growth: Quality education remains a key factor",
+    "source": "The Financial Express",
+    "date": "2022-11-10",
+    "category": "articles",
+    "thumbnail": "https://today.thefinancialexpress.com.bd/uploads/1667979739.jpg",
+    "url": "https://today.thefinancialexpress.com.bd/29th-anniversary-issue-1/bangladeshs-growth-quality-education-remains-a-key-factor-1667979739"
+  },
+  
 ]
