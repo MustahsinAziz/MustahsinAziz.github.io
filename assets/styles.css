@@ -107,8 +107,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Sub-nav (portfolio section bar) */
 .subnav{
   position: sticky;               /* sticks beneath the main header */
-  top: 56px;                      /* match your header height */
-  z-index: 40;
+  top: 0px;                      /* match your header height */
+  z-index: 50;
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid rgba(255,255,255,.08);
   padding: .6rem 1rem;
 }
-
+.anchor-section{ scroll-margin-top: 72px; }
 /* Links */
 .subnav a{
   color: var(--text);
