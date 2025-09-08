@@ -259,8 +259,8 @@ html{ scroll-behavior:smooth }
 }
 .about-text{
   max-width:800px; padding:20px;
-  background:linear-gradient(to right, rgba(44,62,80,.20), rgba(44,62,80,.80));
-  text-align:left; border-radius:8px; border:1px solid rgba(255,255,255,.06);
+  background:linear-gradient(to right, rgba(44,62,80,.60), rgba(44,62,80,.90));
+  text-align:justify; border-radius:8px; border:1px solid rgba(255,255,255,.06);
 }
 .about-text h2{ text-align:center; font-size:32px; margin:0 0 20px }
 .about-text p{ font-size:16px; line-height:1.6; margin:0 0 15px }
@@ -381,7 +381,7 @@ html{ scroll-behavior:smooth }
 
 /* Anchor offset for hash links, same as the working page */
 html{ scroll-behavior: smooth; }
-.blog-anchor{ scroll-margin-top: 88px; }  /* header (~56) + subnav (~32) */
+.blog-anchor{ scroll-margin-top: 0px; }  /* header (~56) + subnav (~32) */
 
 /* Articles grid & cards */
 .article-grid{
