@@ -68,14 +68,14 @@
     "source": "The Financial Express",
     "date": "2013-05-28",
     "category": "articles",
-    "thumbnail": "https://ecdn.dhakatribune.net/contents/cache/image…dten/2013/05/TSC-Indor-Field_Dhaka-University.jpg",
+    "thumbnail": "../images/du1.webp",
     "url": "https://www.dhakatribune.com/opinion/op-ed/27405/achieving-my-du-dream"
   },
     {
     "title": "Bangladesh Roars in the Asian Debating Scene",
     "source": "Dhaka Tribune",
     "date": "2011-08-21",
-    "category": "articles",
+    "category": "mentions",
     "thumbnail": "../images/asdc.jpg",
     "url": "https://archive.thedailystar.net/campus/2011/08/03/class.htm"
   }
