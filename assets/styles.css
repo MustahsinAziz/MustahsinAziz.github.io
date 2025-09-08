@@ -356,13 +356,15 @@ html{ scroll-behavior:smooth }
 }
 
 /* constrain the buttons to your page width and center them */
-.blog-tabs .tabs-inner{
-  max-width: 1200px;
+.blog-tabs .tabs-inner {
+  max-width: 1200px;       /* keeps buttons inside your main width */
   margin: 0 auto;
   padding: 0 1rem;
+
   display: flex;
-  gap: .5rem;
-  justify-content: center;
+  justify-content: center; /* <-- center horizontally */
+  align-items: center;     /* <-- align vertically */
+  gap: .5rem;              /* spacing between buttons */
 }
 
 /* buttons (keep your existing styles, repeated here for clarity) */
