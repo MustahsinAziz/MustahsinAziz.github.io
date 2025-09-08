@@ -337,52 +337,51 @@ html{ scroll-behavior:smooth }
 .icon-row{ display:flex; gap:1.25rem; justify-content:center; align-items:center; margin-top:1rem }
 .icon{ width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:#0b1620; border:1px solid var(--ring) }
 
-/* Tabs */
-/* Full-width sticky sub-nav for Blogs (spans viewport) */
-.blog-tabs {
+/* ---------- Blog Subnav ---------- */
+/* BLOG SUBNAV — copy of your working .subnav */
+.blog-tabs{
   position: sticky;
-  top: 56px;                     /* height of .site-header */
-  z-index: 100;                  /* make sure it stays above content */
-  background: rgba(20,32,43,0.95);
-  backdrop-filter: blur(4px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  padding: 0.55rem 0;
-}
-
-  /* If the inner wrapper is missing, this still centers the buttons */
+  top: 56px;                 /* sit right under your sticky header (56px). 
+                                If you want it pinned to the very top instead, change to top:0 */
+  z-index: 50;
   display: flex;
+  gap: 1rem;
   justify-content: center;
+  padding: .6rem 1rem;
+  background: rgba(20,32,43,.92);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
-/* Center the buttons inside the max page width */
-.blog-tabs .tabs-inner{
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;
-
-  display: flex;
-  justify-content: center !important;  /* force centering */
-  align-items: center;
-  gap: .5rem;
-}
-
-
-
-/* buttons (keep your existing styles, repeated here for clarity) */
-.tab-btn{
-  appearance: none;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(12,18,24,.75);
-  color: #eaf2ff;
+/* Make anchors inside look like the working subnav */
+.blog-tabs a,
+.blog-tabs .tab-btn{
+  color: var(--text);
+  text-decoration: none;
   font-weight: 600;
-  padding: .45rem .9rem;
+  padding: .35rem .75rem;
   border-radius: 999px;
-  cursor: pointer;
-  transition: filter .15s ease, background .15s ease;
+  opacity: .9;
+  transition: background .15s ease, opacity .15s ease;
+  border: 1px solid transparent;      /* keeps layout stable when active adds a border */
+  background: rgba(12,18,24,.75);     /* optional: keep your current tab button base */
 }
-.tab-btn:hover{ filter: brightness(1.08) }
-.tab-btn.is-active{ background: rgba(255,255,255,.12) }
+
+.blog-tabs a:hover,
+.blog-tabs .tab-btn:hover{ 
+  background: rgba(255,255,255,.06); 
+  opacity: 1; 
+}
+
+.blog-tabs a.is-active,
+.blog-tabs .tab-btn.is-active{ 
+  background: rgba(255,255,255,.12); 
+  border: 1px solid rgba(255,255,255,.18); 
+}
+
+/* Anchor offset for hash links, same as the working page */
+html{ scroll-behavior: smooth; }
+.blog-anchor{ scroll-margin-top: 88px; }  /* header (~56) + subnav (~32) */
 
 /* Articles grid & cards */
 .article-grid{
