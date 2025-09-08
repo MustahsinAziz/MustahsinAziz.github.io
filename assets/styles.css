@@ -356,16 +356,40 @@ html{ scroll-behavior:smooth }
 }
 
 /* constrain the buttons to your page width and center them */
-.blog-tabs .tabs-inner {
-  max-width: 1200px;       /* keeps buttons inside your main width */
+/* Full-width sticky sub-nav for Blogs (spans viewport) */
+.blog-tabs{
+  position: sticky;
+  top: 56px;                  /* your header height */
+  z-index: 45;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  background: rgba(20,32,43,.92);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  padding: .55rem 0;
+  margin-bottom: .75rem;
+
+  /* If the inner wrapper is missing, this still centers the buttons */
+  display: flex;
+  justify-content: center;
+}
+
+/* Center the buttons inside the max page width */
+.blog-tabs .tabs-inner{
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
 
   display: flex;
-  justify-content: center; /* <-- center horizontally */
-  align-items: center;     /* <-- align vertically */
-  gap: .5rem;              /* spacing between buttons */
+  justify-content: center !important;  /* force centering */
+  align-items: center;
+  gap: .5rem;
 }
+
 
 /* buttons (keep your existing styles, repeated here for clarity) */
 .tab-btn{
