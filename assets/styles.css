@@ -208,9 +208,24 @@ html{ scroll-behavior:smooth }
 }
 .page-overlay.dark-overlay{ background:rgba(0,0,0,.90) }
 
+.page-overlay::after {
+  content:"";
+  position: fixed;
+  inset: 0;                      /* top/right/bottom/left = 0 */
+  background: rgba(0,0,0,0);     /* transparent by default */
+  pointer-events: none;          /* don’t block clicks */
+  transition: background .25s ease;
+  z-index: 1;                    /* sits above background, below content */
+}
+
+/* When scrolled (class added by JS), darken the whole viewport */
+.page-overlay.dark-overlay::after {
+  background: rgba(0,0,0,.90);
+}
+
 .about-section{
   display:flex; justify-content:flex-end; align-items:center;
-  padding:60px 20px; margin:20px;
+  padding:60px 20px; margin:20px; margin-bottom: 24px;
 }
 .about-text{
   max-width:800px; padding:20px;
@@ -238,6 +253,41 @@ html{ scroll-behavior:smooth }
 }
 .gallery-item:hover .caption-box{ opacity:1 }
 .caption-text{ font-size:16px; color:#fff; text-align:center }
+
+/* Ensure wrapping and center alignment */
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Force all vertical (tall) items to come first */
+.gallery-item.tall { 
+  height: 400px; 
+  order: 0;        /* row 1 */
+}
+
+/* Everything else (horizontal/regular) goes after */
+.gallery-item:not(.tall) {
+  height: 200px;
+  order: 1;        /* row 2 */
+}
+
+/* Keep width consistent */
+.gallery-item { 
+  width: 300px; 
+  position: relative; 
+  overflow: hidden; 
+  border-radius: 8px; 
+  border: 1px solid rgba(255,255,255,.06);
+  box-shadow: 0 10px 24px rgba(0,0,0,.2);
+}
+.gallery-item img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+}
 
 /* Keep header/footer above overlay */
 .site-header, .site-footer{ position:relative; z-index:2 }
