@@ -131,14 +131,20 @@ a:hover{ text-decoration:underline }
 }
 
 /* Meta (location + icons) */
-.meta{ margin-top:.12rem }
+.meta{ margin-top: 2rem }
 .hero .meta{
   display:flex; justify-content:center; align-items:center;
   gap:.5rem; margin-top:.75rem; margin-bottom:2rem;
 }
 
 /* Intro panel below hero summary */
-.intro-panel{ margin-top:.9rem }
+.intro-panel {
+  max-width: 900px;      /* was likely ~700px, make it wider */
+  margin: 1rem auto 0;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;       /* adjust smaller if still too long */
+  line-height: 1.5;      /* good readability */
+}
 
 /* ---------- Portfolio sub-nav ---------- */
 .subnav{
