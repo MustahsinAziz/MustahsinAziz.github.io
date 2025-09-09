@@ -337,6 +337,11 @@ html{ scroll-behavior:smooth }
 .icon-row{ display:flex; gap:1.25rem; justify-content:center; align-items:center; margin-top:1rem }
 .icon{ width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:#0b1620; border:1px solid var(--ring) }
 
+.page-contact h1 {
+  text-align: center;
+  margin-bottom: 1.5rem; /* optional: spacing below */
+}
+
 /* ---------- Blog Subnav ---------- */
 /* BLOG SUBNAV — copy of your working .subnav */
 .blog-tabs{
