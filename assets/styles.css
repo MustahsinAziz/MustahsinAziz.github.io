@@ -453,3 +453,138 @@ html{ scroll-behavior: smooth; }
 @media (max-width:640px){
   .hero h1{ font-size:2.2rem }
 }
+
+
+
+/* ====== 1) Landing “lift”, 2) Mobile burger menu, 3) Scroll cue ========= */
+/* ======================================================================= */
+
+/* --- Variables for tweaks without touching existing tokens --- */
+:root{
+  --landing-lift: 28px;      /* raise hero content upward (increase if you need more space) */
+  --menu-min-width: 220px;   /* dropdown width on small screens */
+}
+
+/* 1) Lift the landing page hero content up a bit (index.html only uses .hero) */
+.hero .hero-inner{
+  transform: translateY(calc(var(--landing-lift) * -1));
+}
+
+/* Optional email line styling, assuming you’ll add an element with .email */
+.hero .email{
+  display:block;
+  margin-top:.25rem;
+  font-size:0.98rem;
+  opacity:.95;
+}
+
+/* 2) Mobile menu (CSS-only): collapse header links into a 3-dot dropdown on small screens */
+@media (max-width: 820px){
+  .site-header .nav{ position:relative }
+  /* Hide the links row by default on small screens */
+  .nav .links{
+    display:none;
+    position:absolute;
+    top:100%;
+    right:0;
+    z-index:1000;
+    background:#ffffff;
+    color:#0b1620;
+    border:1px solid rgba(0,0,0,.08);
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+    border-radius:12px;
+    padding:6px 0;
+    min-width:var(--menu-min-width);
+    flex-direction:column;
+  }
+  /* Reveal on hover/tap/focus (mobile treats first tap as hover) */
+  .nav:hover .links,
+  .nav:focus-within .links{
+    display:flex;
+  }
+  /* Make items touch-friendly */
+  .nav .links a{
+    display:block;
+    padding:10px 14px;
+    color:#0b1620;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .nav .links a + a{ border-top:1px solid #f1f5f9 }
+
+  /* Add a subtle three-dot button at the right side (no HTML changes required) */
+  .nav::after{
+    content:"⋯";
+    display:inline-block;
+    margin-left:auto;
+    font-size:20px;
+    line-height:1;
+    padding:8px 12px;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.06);
+    border-radius:10px;
+    cursor:pointer;
+    user-select:none;
+  }
+}
+
+/* 3) Scroll cue at bottom of the hero to hint “more below” (highlights) */
+/* Works automatically via ::after. If you add <a class="scroll-cue" href="#highlights">, 
+   the button style below will make it clickable. */
+.hero{
+  /* ensure we can anchor the cue to the bottom center */
+  overflow:hidden;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:20px;
+  transform:translateX(-50%);
+  width:26px; height:42px;
+  border:2px solid rgba(255,255,255,.7);
+  border-radius:20px;
+  box-shadow:0 2px 8px rgba(0,0,0,.25);
+  opacity:.85;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:46px;                 /* sits inside the “mouse” outline */
+  transform:translateX(-50%);
+  width:4px; height:8px;
+  background:#fff;
+  border-radius:2px;
+  opacity:.95;
+  animation: scrollCue 1.6s infinite ease-in-out;
+}
+
+/* If you prefer a real clickable button, add <a class="scroll-cue" href="#highlights"></a> */
+.scroll-cue{
+  position:absolute;
+  left:50%; bottom:20px; transform:translateX(-50%);
+  width:46px; height:46px; border-radius:999px;
+  display:grid; place-items:center;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2);
+  text-decoration:none;
+  box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+.scroll-cue::after{
+  content:"⌄";
+  font-size:20px; line-height:1; color:#fff;
+  animation: scrollArrow 1.4s infinite;
+}
+
+@keyframes scrollCue{
+  0%   { transform:translate(-50%,0); opacity:.2 }
+  40%  { transform:translate(-50%,8px); opacity:1 }
+  100% { transform:translate(-50%,0); opacity:.2 }
+}
+@keyframes scrollArrow{
+  0%   { transform:translateY(0); opacity:.7 }
+  50%  { transform:translateY(6px); opacity:1 }
+  100% { transform:translateY(0); opacity:.7 }
+}
