@@ -159,7 +159,7 @@ a:hover{ text-decoration:underline }
 
 /* ---------- Portfolio / Outreach sub-navs ---------- */
 .subnav{
-  position:sticky; top:var(--header-h);
+  position:sticky; top: 0px;
   z-index:150; /* sits above content but under header on mobile */
   display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;
   padding:.6rem 1rem;
@@ -198,7 +198,7 @@ a:hover{ text-decoration:underline }
 
 html{ scroll-behavior:smooth }
 /* header (~56) + subnav (~32) ≈ 88px; keep anchor offset */
-.anchor-section{ scroll-margin-top: calc(var(--header-h) + var(--subnav-h)) }
+.anchor-section{ scroll-margin-top: 88px}
 
 /* ---------- Social buttons ---------- */
 .social{
