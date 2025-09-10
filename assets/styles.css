@@ -815,4 +815,13 @@ html{ scroll-behavior: smooth; }
 
 .chart--grouped .legend .tick { text-anchor:start; }
 
+/* Teaching page background (same as other pages) */
+.page-teaching {
+  background: url('../images/hero.jpg') center/cover fixed no-repeat;
+}
+
+/* Left-align section titles on the Teaching page */
+.page-teaching h1 {
+  text-align: left;
+}
 
