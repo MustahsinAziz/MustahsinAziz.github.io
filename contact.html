@@ -3,16 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Contact — Mustahsin Aziz</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Teaching — Mustahsin Aziz</title>
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="page-contact">
+<body class="page-contact page-teaching">
 
 <header class="site-header">
   <nav class="nav">
@@ -27,32 +24,177 @@
   </nav>
 </header>
 
-<main class="section">
-  <h1>Get In Touch</h1>
-  <ul class="contact-list">
-    <li><strong>Personal Email:</strong> mustahsniaziz@gmail.com</li>
-    <li><strong>WVU Student Email:</strong> ma00082@mix.wvu.edu</li>
-    <li><strong>WVU Employee Email:</strong> mustahsinul.aziz@mail.wvu.edu</li>
-  </ul>
+<!-- Sub-nav -->
+<nav class="subnav">
+  <a href="#t-overview">Teaching</a>
+  <a href="#t-courses">Courses</a>
+  <a href="#t-evals">Evaluations</a>
+  <a href="#t-materials">Materials</a>
+  <a href="#t-testimonials">Testimonials</a>
+</nav>
 
-  <div class="social" aria-label="Social links">
-        <a class="social-btn" href="mailto:mustahsniaziz@gmail.com" title="Email">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-        <a class="social-btn" href="https://www.linkedin.com/in/mustahsinaziz" target="_blank" rel="noopener" title="LinkedIn">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a class="social-btn" href="https://orcid.org/0000-0001-7702-624X" target="_blank" rel="noopener" title="ORCID">
-          <i class="fa-brands fa-orcid"></i>
-        </a>
-        <a class="social-btn" href="https://github.com/MustahsinAziz" target="_blank" rel="noopener" title="GitHub">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <!-- Font Awesome doesn't have Google Scholar; using Google icon as before -->
-        <a class="social-btn" href="https://scholar.google.com/citations?user=brQG7xMAAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar">
-          <i class="fa-brands fa-google"></i>
-        </a>
-      </div>
+<main>
+
+  <!-- ===== Overview ===== -->
+  <section id="t-overview" class="section anchor-section">
+  <h1>Teaching</h1>
+  <p class="intro-panel teaching-intro">
+    I teach economics with three goals: <em>accessibility</em>, <em>engagement</em>, and <em>relevance</em>. 
+    My courses connect theory to lived experience using interactive exercises, applied data, and policy cases—
+    so students leave with tools they can use beyond the classroom.
+  </p>
+  <p>
+    <a class="btn-card" href="assets/teaching/Mustahsin_teaching_statement_8sept2025.pdf" target="_blank" rel="noopener">
+      Teaching Statement →
+    </a>
+  </p>
+</section>
+
+  <!-- ===== Courses ===== -->
+  <section id="t-courses" class="section anchor-section">
+    <h1>Instructor of Record</h1>
+
+    <ul class="course-list">
+      <li>
+        <h3> Introductory Agricultural & Agribusiness Economics (ARE 150)</h3>
+        <ul>
+          <li>Summer 2024, Fall 2024, Spring 2025</li>
+          <li>Book: <em>Microeconomics</em> by Mateer &amp; Coppock</li>
+          <li>
+            <a class="link-download" href="assets/teaching/ARE_150_Syllabus_Aug24.pdf" target="_blank" rel="noopener">Download Syllabus</a>
+          </li>
+        </ul>
+      </li>
+
+  <!-- ===== Evaluations ===== -->
+<section id="t-evals" class="section anchor-section">
+  <h1>Teaching Evaluations</h1>
+
+  <div class="eval-grid">
+
+    <!-- Chart 1: Response Rate (replace numbers in data labels) -->
+    <figure class="eval-card">
+      <figcaption>Survey Response Rate</figcaption>
+      <svg class="chart chart--bar" viewBox="0 0 420 240" role="img" aria-label="Survey response rate by term">
+        <!-- axes -->
+        <line x1="40" y1="10" x2="40" y2="200" class="axis"/>
+        <line x1="40" y1="200" x2="400" y2="200" class="axis"/>
+        <!-- labels -->
+        <text x="40" y="220" class="tick">S24</text>
+        <text x="140" y="220" class="tick">F24</text>
+        <text x="240" y="220" class="tick">S25</text>
+        <text x="340" y="220" class="tick">F25</text>
+        <!-- gridlines -->
+        <g class="grid">
+          <line x1="40" y1="160" x2="400" y2="160"/>
+          <line x1="40" y1="120" x2="400" y2="120"/>
+          <line x1="40" y1="80"  x2="400" y2="80"/>
+          <line x1="40" y1="40"  x2="400" y2="40"/>
+        </g>
+        <!-- bars (edit bar heights via y & height) 
+             Height mapping example (0–100% -> 0–160px):
+             height = percent * 1.6   ;   y = 200 - height
+        -->
+        <!-- S24 = 62% -->
+        <rect x="70"  y="200 - 99.2" width="40" height="99.2" class="bar"/>
+        <!-- F24 = 68% -->
+        <rect x="170" y="200 - 108.8" width="40" height="108.8" class="bar"/>
+        <!-- S25 = 74% -->
+        <rect x="270" y="200 - 118.4" width="40" height="118.4" class="bar"/>
+        <!-- F25 = 71% -->
+        <rect x="370" y="200 - 113.6" width="40" height="113.6" class="bar"/>
+      </svg>
+    </figure>
+
+    <!-- Chart 2: Teaching Methods (example 5-item Likert mean) -->
+    <figure class="eval-card">
+      <figcaption>Evaluation of Teaching Methods</figcaption>
+      <svg class="chart chart--bar" viewBox="0 0 420 240" role="img" aria-label="Mean scores (1–5) on teaching methods">
+        <!-- axes -->
+        <line x1="40" y1="10" x2="40" y2="200" class="axis"/>
+        <line x1="40" y1="200" x2="400" y2="200" class="axis"/>
+        <!-- y ticks 1..5 -->
+        <g class="grid">
+          <line x1="40" y1="200" x2="400" y2="200"/><text x="10" y="204" class="tick">1</text>
+          <line x1="40" y1="160" x2="400" y2="160"/><text x="10" y="164" class="tick">2</text>
+          <line x1="40" y1="120" x2="400" y2="120"/><text x="10" y="124" class="tick">3</text>
+          <line x1="40" y1="80"  x2="400" y2="80"/><text x="10" y="84" class="tick">4</text>
+          <line x1="40" y1="40"  x2="400" y2="40"/><text x="10" y="44" class="tick">5</text>
+        </g>
+        <!-- x labels -->
+        <text x="70"  y="220" class="tick">Clarity</text>
+        <text x="170" y="220" class="tick">Engage</text>
+        <text x="270" y="220" class="tick">Support</text>
+        <text x="370" y="220" class="tick">Relevance</text>
+
+        <!-- bars (value 1–5 -> 0–160px): height = (value-1)/4 * 160 ; y = 200 - height -->
+        <!-- Clarity = 4.6 -->
+        <rect x="60"  y="200 - 144" width="40" height="144" class="bar"/>
+        <!-- Engagement = 4.4 -->
+        <rect x="160" y="200 - 136" width="40" height="136" class="bar"/>
+        <!-- Support = 4.7 -->
+        <rect x="260" y="200 - 148" width="40" height="148" class="bar"/>
+        <!-- Relevance = 4.5 -->
+        <rect x="360" y="200 - 140" width="40" height="140" class="bar"/>
+      </svg>
+    </figure>
+
+  </div>
+
+  <div class="eval-actions">
+    <a class="btn-card" href="assets/personal/ARE_150_student_evals.pdf" target="_blank" rel="noopener">
+      Student Evaluations →
+    </a>
+    <a class="btn-card" href="assets/teaching/Mustahsin_evidence_of_teaching_effectiveness_8sept2025.pdf" target="_blank" rel="noopener">
+      Evidence of Teaching Effectiveness →
+    </a>
+  </div>
+</section>
+
+
+  <!-- ===== Materials ===== -->
+  <section id="t-materials" class="section anchor-section">
+    <h1>Teaching Materials</h1>
+
+    <div class="grid">
+      <article class="card">
+        <h3>Class Project Guide</h3>
+        <p class="muted">Applied project template connecting course concepts to campus/community problems.</p>
+        <a class="pub-link" href="assets/teaching/project_guide.pdf" target="_blank" rel="noopener">Download →</a>
+      </article>
+
+      <article class="card">
+        <h3>In-Class Activities (iClicker/Kahoot)</h3>
+        <p class="muted">Question banks for opportunity cost, elasticity, externalities, and market structure.</p>
+        <a class="pub-link" href="assets/teaching/activity_bank.pdf" target="_blank" rel="noopener">Download →</a>
+      </article>
+
+      <article class="card">
+        <h3>Lecture Slides Sampler</h3>
+        <p class="muted">A selection of slides used across topics; accessible formatting and worked examples.</p>
+        <a class="pub-link" href="assets/teaching/lecture_slides_sampler.pdf" target="_blank" rel="noopener">Download →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section id="t-testimonials" class="section anchor-section">
+    <h1>Student Testimonials</h1>
+
+    <div class="testimonials">
+      <blockquote class="pull-quote">
+        “No suggestions, just appreciated the passion and competence which Mr. Aziz showed in his subject. It was my first economics class and it has definitely changed the way I view the world.”
+      </blockquote>
+
+      <blockquote class="pull-quote">
+        “The professor made economics interesting and easy to learn—I gained a lot from this class and instructor.”
+      </blockquote>
+
+      <blockquote class="pull-quote">
+        “I loved this class and think the course load was beneficial and the instructor was supportive!”
+      </blockquote>
+    </div>
+  </section>
 
 </main>
 
@@ -62,7 +204,7 @@
     <p class="small">Photo credits: background by Mushfiq Khan</p>
   </div>
 </footer>
-<script src="assets/site.js"></script>
 
+<script src="assets/site.js"></script>
 </body>
 </html>
