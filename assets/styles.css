@@ -764,3 +764,55 @@ html{ scroll-behavior: smooth; }
 .themed-chart img{
   filter: sepia(12%) saturate(140%) hue-rotate(185deg) brightness(1.02) contrast(1.05);
 }
+
+
+/* ==== Donut chart styling ==== */
+.chart--donut {
+  width: 100%;
+  max-width: 240px;  /* control size */
+  margin: 0 auto;
+  display: block;
+}
+
+.donut-ring {
+  stroke: rgba(255,255,255,.2);   /* light ring background */
+}
+
+.donut-segment {
+  transition: stroke-dasharray .6s ease;
+}
+
+.donut-text {
+  font-size: 8px;
+  font-weight: 700;
+  fill: #e8eef5;  /* light text color */
+}
+
+/* ==== Grouped bar chart styling (append-only) ========================== */
+.chart--grouped { width:100%; height:auto; display:block; background:#0b1620; }
+
+.chart--grouped .axis {
+  stroke: rgba(255,255,255,.28);
+  stroke-width:1.25;
+}
+
+.chart--grouped .grid line {
+  stroke: rgba(255,255,255,.10);
+  stroke-width:1;
+}
+
+.chart--grouped .tick {
+  fill:#aab7c4;
+  font-size:12px;
+  text-anchor:middle;
+}
+
+.chart--grouped .bar { rx:4; }
+
+.chart--grouped .series-a { fill:#58a6ff; }   /* Beneficial — accent blue */
+.chart--grouped .series-b { fill:#7bc4ff; }   /* Neutral — lighter blue  */
+.chart--grouped .series-c { fill:#9fb3c8; }   /* Not Helpful — slate/cyan */
+
+.chart--grouped .legend .tick { text-anchor:start; }
+
+
