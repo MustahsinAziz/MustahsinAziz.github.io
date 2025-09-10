@@ -40,7 +40,7 @@ a:hover{ text-decoration:underline }
   background:#263544;
   position:sticky; top:0; left:0; right:0;
   width:100%;
-  z-index:50; /* bumped on mobile below */
+  z-index:500; /* bumped on mobile below */
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 .nav{
@@ -160,7 +160,7 @@ a:hover{ text-decoration:underline }
 /* ---------- Portfolio / Outreach sub-navs ---------- */
 .subnav{
   position:sticky; top: 0px;
-  z-index:150; /* sits above content but under header on mobile */
+  z-index:300; /* sits above content but under header on mobile */
   display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;
   padding:.6rem 1rem;
   background:rgba(20,32,43,.92);
@@ -179,8 +179,8 @@ a:hover{ text-decoration:underline }
 
 /* Outreach tabs */
 .blog-tabs{
-  position: sticky; top: var(--header-h);
-  z-index: 150;
+  position: sticky; top:0;
+  z-index: 300;
   display: flex; gap: 1rem; justify-content: center; flex-wrap:wrap;
   padding: .6rem 1rem;
   background: rgba(20,32,43,.92);
@@ -403,74 +403,90 @@ html{ scroll-behavior:smooth }
 }
 
 /* ---------- Mobile: collapsible subnav (Research) ---------- */
-/* No HTML changes needed. Tap anywhere on the pill to open. */
 @media (max-width:820px){
   .page-portfolio .subnav{
-    position:sticky; top:var(--header-h);
-    padding:.5rem 1rem; justify-content:center;
+    position:sticky; top:0;               /* sits flush under header (header overlays) */
+    padding:.5rem 1rem;
+    justify-content:center;
   }
-  /* Button label shows current subsection (fallback “Research ▾”) */
-  .page-portfolio .subnav{ --subnav-label:"Research ▾"; }
-  body:has(#pubs:target)       .page-portfolio .subnav{ --subnav-label:"Publications ▾"; }
-  body:has(#data:target)       .page-portfolio .subnav{ --subnav-label:"Data Projects ▾"; }
-  body:has(#intproj:target)    .page-portfolio .subnav{ --subnav-label:"Institutional Projects ▾"; }
-  body:has(#working:target)    .page-portfolio .subnav{ --subnav-label:"Working Papers ▾"; }
 
-  /* Render the “button” */
+  /* Render a static "Sections" pill that opens the menu */
   .page-portfolio .subnav::after{
-    content: var(--subnav-label);
+    content:"Sections ▾";
     display:inline-block;
     padding:.4rem .75rem;
     border-radius:999px;
-    background: rgba(12,18,24,.9);
+    background: rgba(12,18,24,.95);       /* distinct from main nav */
     border:1px solid rgba(255,255,255,.16);
     box-shadow:0 8px 18px rgba(0,0,0,.25);
     font-weight:700; color:#e8eef5;
     cursor:pointer; user-select:none;
   }
 
-  /* Hide links until opened (hover/tap on container) */
+  /* Hide links until opened */
+  .page-portfolio .subnav{ position:relative }
   .page-portfolio .subnav a{
-    display:none; position:absolute; right:1rem; top:calc(100% + 6px);
-    background:#fff; color:#0b1620; border:1px solid rgba(0,0,0,.08);
-    box-shadow:0 10px 24px rgba(0,0,0,.12); border-radius:12px; padding:6px 0; min-width:var(--menu-min-width);
-    flex-direction:column;
+    display:none;
+    position:absolute;
+    right:1rem; top:calc(100% + 8px);
+    background:#ffffff; color:#0b1620;
+    border:1px solid rgba(0,0,0,.08);
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+    border-radius:12px;
+    padding:6px 0;
+    min-width:var(--menu-min-width);
+    white-space:nowrap;
   }
+
+  /* Open on hover/focus (first tap = hover on mobile) */
   .page-portfolio .subnav:hover a,
-  .page-portfolio .subnav:focus-within a{ display:flex }
-  .page-portfolio .subnav a{ position:static; display:block; padding:10px 14px; white-space:nowrap; }
+  .page-portfolio .subnav:focus-within a{
+    display:block;
+  }
+
+  .page-portfolio .subnav a{ padding:10px 14px }
   .page-portfolio .subnav a + a{ border-top:1px solid #f1f5f9 }
 }
 
 /* ---------- Mobile: collapsible “tabs” on Outreach ---------- */
 @media (max-width:820px){
-  .blog-tabs{ padding:.5rem 1rem; justify-content:center }
-  .blog-tabs{ --blog-label:"All ▾"; }
-  .blog-tabs:has(.tab-btn.is-active:nth-of-type(2)){ --blog-label:"World Bank Posts ▾"; }
-  .blog-tabs:has(.tab-btn.is-active:nth-of-type(3)){ --blog-label:"Op-Eds & Articles ▾"; }
-  .blog-tabs:has(.tab-btn.is-active:nth-of-type(4)){ --blog-label:"Media Mentions ▾"; }
+  .blog-tabs{
+    position:sticky; top:0;               /* flush under header */
+    padding:.5rem 1rem;
+    justify-content:center;
+  }
 
+  /* Static "Categories" pill */
   .blog-tabs::after{
-    content: var(--blog-label);
+    content:"Categories ▾";
     display:inline-block;
     padding:.4rem .75rem;
     border-radius:999px;
-    background: rgba(12,18,24,.9);
+    background: rgba(12,18,24,.95);       /* distinct from main nav */
     border:1px solid rgba(255,255,255,.16);
     box-shadow:0 8px 18px rgba(0,0,0,.25);
     font-weight:700; color:#e8eef5;
     cursor:pointer; user-select:none;
   }
 
-  /* Hide the buttons until opened */
-  .blog-tabs .tabs-inner{ position:relative }
-  .blog-tabs .tab-btn{ display:none; position:absolute; right:1rem; top:calc(100% + 6px) }
+  /* Dropdown */
+  .blog-tabs{ position:relative }
+  .blog-tabs .tab-btn{
+    display:none;
+    position:absolute;
+    right:1rem; top:calc(100% + 8px);
+    background:#ffffff; color:#0b1620;
+    border:1px solid rgba(0,0,0,.08);
+    border-radius:12px;
+    padding:10px 14px;
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+    white-space:nowrap;
+  }
   .blog-tabs:hover .tab-btn,
   .blog-tabs:focus-within .tab-btn{
-    display:block; background:#fff; color:#0b1620; border:1px solid rgba(0,0,0,.08);
-    border-radius:10px; padding:10px 14px; box-shadow:0 10px 24px rgba(0,0,0,.12); margin-top:0
+    display:block;
   }
-  .blog-tabs .tab-btn + .tab-btn{ border-top:1px solid #f1f5f9; display:block }
+  .blog-tabs .tab-btn + .tab-btn{ border-top:1px solid #f1f5f9 }
 }
 
 /* ---------- Darken background on all non-index pages ---------- */
