@@ -497,7 +497,7 @@ html{ scroll-behavior:smooth }
 .page-cv::before,
 .page-teaching::before{
   content:""; position:fixed; inset:0; pointer-events:none;
-  background: rgba(0,0,0,.22); /* slightly darker */
+  background: rgba(0,0,0,.0); /* slightly darker */
   z-index:0;
 }
 
