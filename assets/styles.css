@@ -632,6 +632,64 @@ html{ scroll-behavior:smooth }
   text-align:left;
   margin-left:0;
   margin-right:auto;
+
+  /* === Research & Job Market Paper text blocks: wider, justified, aligned with titles === */
+/* Research overview blurb */
+#overview .intro-panel{
+  /* fill the full .section width (1100px) instead of the old 900px cap */
+  max-width: none;
+  /* align left edge with the H1 */
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  /* justify text for a clean column look */
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Job Market Paper abstract */
+.jmp-intro{
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Optional: give the buttons a little breathing room when the text goes wider */
+.jmp-section .btn-card,
+#overview .btn-card{
+  margin-top: .65rem;
+}
   max-width:900px;   /* matches Research intro width */
 }
 .jmp-section .btn-card{ margin-top:.5rem }
+
+
+/* === Teaching intro: wider, justified, aligned with title === */
+.page-teaching #t-overview .teaching-intro,
+.page-teaching #t-overview .teaching-blurb{
+  max-width: none;      /* use full .section width (1100px) */
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* small spacing tweak for the button under the intro */
+.page-teaching #t-overview .btn-card{
+  margin-top: .65rem;
+}
+
+/* (optional) on very narrow screens, avoid awkward spacing from justification */
+@media (max-width: 560px){
+  .page-teaching #t-overview .teaching-intro,
+  .page-teaching #t-overview .teaching-blurb{
+    text-align: left;
+  }
+}
