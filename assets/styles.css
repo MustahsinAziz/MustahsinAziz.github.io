@@ -393,9 +393,11 @@ html{ scroll-behavior:smooth }
 }
 
 /* ---------- Keep Research subnav visible the whole page ---------- */
-/* (Sticky below header; higher z-index so it never disappears) */
-.page-portfolio .subnav{ position:sticky; top:var(--header-h); z-index:150 }
-
+.page-portfolio .subnav{
+  position: sticky;
+  top: 0;          /* sit flush to the very top as you scroll */
+  z-index: 300;    /* above content, below the header (header is 600 on mobile) */
+}
 /* ---------- Mobile header menu above subnav (Research/Outreach) ---------- */
 @media (max-width:820px){
   .site-header{ z-index:400 }  /* ensure dropdown (links) is above subnav/blog-tabs */
