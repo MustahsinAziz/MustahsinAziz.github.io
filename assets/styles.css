@@ -437,8 +437,9 @@ html{ scroll-behavior:smooth }
     padding:.5rem 1rem;
     justify-content:center;
   }
-/* Closed state: show only the trigger “Sections ▾” */
-.page-portfolio .subnav::after{
+
+  /* Closed: show trigger */
+  .page-portfolio .subnav::after{
     content:"Sections ▾";
     display:inline-block;
     padding:.4rem .75rem;
@@ -449,24 +450,11 @@ html{ scroll-behavior:smooth }
     font-weight:700; color:#e8eef5;
     cursor:pointer; user-select:none;
   }
+
+  /* Hide links until opened (no absolute positioning) */
   .page-portfolio .subnav a{ display:none; }
 
-  /* Hide links until opened */
-  .page-portfolio .subnav{ position:relative }
-  .page-portfolio .subnav a{
-    display:none;
-    position:absolute;
-    right:1rem; top:calc(100% + 8px);
-    background:#ffffff; color:#0b1620;
-    border:1px solid rgba(0,0,0,.08);
-    box-shadow:0 10px 24px rgba(0,0,0,.12);
-    border-radius:12px;
-    padding:6px 0;
-    min-width:var(--menu-min-width);
-    white-space:nowrap;
-  }
-
-   /* Open state: turn the subnav itself into a right-aligned white dropdown panel */
+  /* Open: convert bar into a right-aligned white panel (like main nav / outreach) */
   .page-portfolio .subnav:hover,
   .page-portfolio .subnav:focus-within{
     display:inline-flex;
@@ -478,17 +466,14 @@ html{ scroll-behavior:smooth }
     border-radius:12px;
     box-shadow:0 10px 24px rgba(0,0,0,.12);
     padding:6px 0;
-    margin-left:auto;               /* anchor to right like main nav */
+    margin-left:auto;
     margin-right:1rem;
   }
   .page-portfolio .subnav:hover::after,
   .page-portfolio .subnav:focus-within::after{
     content:"Sections ▲";
     padding:10px 14px;
-    background:transparent;
-    border:none;
-    box-shadow:none;
-    color:#0b1620;
+    background:transparent; border:none; box-shadow:none; color:#0b1620;
   }
   .page-portfolio .subnav:hover a,
   .page-portfolio .subnav:focus-within a{
@@ -641,3 +626,12 @@ html{ scroll-behavior:smooth }
     background:rgba(255,255,255,.06); border-radius:10px; cursor:pointer; user-select:none;
   }
 }
+
+/* ==== Job Market Paper section (append-only) ============================ */
+.jmp-intro{
+  text-align:left;
+  margin-left:0;
+  margin-right:auto;
+  max-width:900px;   /* matches Research intro width */
+}
+.jmp-section .btn-card{ margin-top:.5rem }
