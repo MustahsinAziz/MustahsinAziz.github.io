@@ -392,6 +392,32 @@ html{ scroll-behavior:smooth }
   border:1px solid rgba(255,255,255,.18);
 }
 
+/* Testimonials with accent rule (gold/amber line) */
+.testimonials{
+  display:grid;
+  gap:1rem;
+  max-width:900px;
+}
+.pull-quote{
+  position:relative;
+  margin:0;
+  padding:.75rem 1rem .75rem 1.1rem;
+  background: rgba(20,32,43,.85);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;
+  color:#e8eef5;
+  line-height:1.7;
+}
+.pull-quote::before{
+  content:"";
+  position:absolute;
+  left:0; top:0; bottom:0;
+  width:4px;
+  background: linear-gradient(180deg, #f4c056, #dca74a);
+  border-top-left-radius:12px;
+  border-bottom-left-radius:12px;
+}
+
 /* ---------- Keep Research subnav visible the whole page ---------- */
 .page-portfolio .subnav{
   position: sticky;
@@ -407,23 +433,23 @@ html{ scroll-behavior:smooth }
 /* ---------- Mobile: collapsible subnav (Research) ---------- */
 @media (max-width:820px){
   .page-portfolio .subnav{
-    position:sticky; top:0;               /* sits flush under header (header overlays) */
+    position:sticky; top:0;
     padding:.5rem 1rem;
     justify-content:center;
   }
-
-  /* Render a static "Sections" pill that opens the menu */
-  .page-portfolio .subnav::after{
+/* Closed state: show only the trigger “Sections ▾” */
+.page-portfolio .subnav::after{
     content:"Sections ▾";
     display:inline-block;
     padding:.4rem .75rem;
     border-radius:999px;
-    background: rgba(12,18,24,.95);       /* distinct from main nav */
+    background: rgba(12,18,24,.95);
     border:1px solid rgba(255,255,255,.16);
     box-shadow:0 8px 18px rgba(0,0,0,.25);
     font-weight:700; color:#e8eef5;
     cursor:pointer; user-select:none;
   }
+  .page-portfolio .subnav a{ display:none; }
 
   /* Hide links until opened */
   .page-portfolio .subnav{ position:relative }
@@ -440,68 +466,157 @@ html{ scroll-behavior:smooth }
     white-space:nowrap;
   }
 
-  /* Open on hover/focus (first tap = hover on mobile) */
+   /* Open state: turn the subnav itself into a right-aligned white dropdown panel */
+  .page-portfolio .subnav:hover,
+  .page-portfolio .subnav:focus-within{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:stretch;
+    background:#ffffff;
+    color:#0b1620;
+    border:1px solid rgba(0,0,0,.08);
+    border-radius:12px;
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+    padding:6px 0;
+    margin-left:auto;               /* anchor to right like main nav */
+    margin-right:1rem;
+  }
+  .page-portfolio .subnav:hover::after,
+  .page-portfolio .subnav:focus-within::after{
+    content:"Sections ▲";
+    padding:10px 14px;
+    background:transparent;
+    border:none;
+    box-shadow:none;
+    color:#0b1620;
+  }
   .page-portfolio .subnav:hover a,
   .page-portfolio .subnav:focus-within a{
     display:block;
+    padding:10px 14px;
+    color:#0b1620;
+    white-space:nowrap;
+    min-width:var(--menu-min-width);
   }
-
-  .page-portfolio .subnav a{ padding:10px 14px }
-  .page-portfolio .subnav a + a{ border-top:1px solid #f1f5f9 }
+  .page-portfolio .subnav:hover a + a,
+  .page-portfolio .subnav:focus-within a + a{
+    border-top:1px solid #f1f5f9;
+  }
 }
-
-/* ---------- Mobile: collapsible “tabs” on Outreach ---------- */
+/* ---------- Mobile: collapsible tabs (Outreach) — panel list like main nav ---------- */
 @media (max-width:820px){
   .blog-tabs{
-    position:sticky; top:0;               /* flush under header */
+    position:sticky; top:0;
     padding:.5rem 1rem;
     justify-content:center;
   }
 
-  /* Static "Categories" pill */
+  /* Closed: show trigger */
   .blog-tabs::after{
     content:"Categories ▾";
     display:inline-block;
     padding:.4rem .75rem;
     border-radius:999px;
-    background: rgba(12,18,24,.95);       /* distinct from main nav */
+    background: rgba(12,18,24,.95);
     border:1px solid rgba(255,255,255,.16);
     box-shadow:0 8px 18px rgba(0,0,0,.25);
     font-weight:700; color:#e8eef5;
     cursor:pointer; user-select:none;
   }
+  .blog-tabs .tab-btn{ display:none; }
 
-  /* Dropdown */
-  .blog-tabs{ position:relative }
-  .blog-tabs .tab-btn{
-    display:none;
-    position:absolute;
-    right:1rem; top:calc(100% + 8px);
-    background:#ffffff; color:#0b1620;
+  /* Open: convert tabs into a white dropdown panel aligned right */
+  .blog-tabs:hover,
+  .blog-tabs:focus-within{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:stretch;
+    background:#ffffff;
+    color:#0b1620;
     border:1px solid rgba(0,0,0,.08);
     border-radius:12px;
-    padding:10px 14px;
     box-shadow:0 10px 24px rgba(0,0,0,.12);
-    white-space:nowrap;
+    padding:6px 0;
+    margin-left:auto;
+    margin-right:1rem;
+  }
+  .blog-tabs:hover::after,
+  .blog-tabs:focus-within::after{
+    content:"Categories ▲";
+    padding:10px 14px;
+    background:transparent;
+    border:none;
+    box-shadow:none;
+    color:#0b1620;
   }
   .blog-tabs:hover .tab-btn,
   .blog-tabs:focus-within .tab-btn{
     display:block;
+    padding:10px 14px;
+    color:#0b1620;
+    white-space:nowrap;
+    min-width:var(--menu-min-width);
   }
   .blog-tabs .tab-btn + .tab-btn{ border-top:1px solid #f1f5f9 }
 }
 
-/* ---------- Darken background on all non-index pages ---------- */
-/* Use a subtle overlay; exclude About (which already has its own overlay logic) */
-.page-portfolio::before,
-.page-blogs::before,
-.page-contact::before,
-.page-cv::before,
-.page-teaching::before{
-  content:""; position:fixed; inset:0; pointer-events:none;
-  background: rgba(0,0,0,.0); /* slightly darker */
-  z-index:0;
+/* ---------- Mobile: collapsible subnav (Teaching) — panel list like main nav ---------- */
+@media (max-width:820px){
+  .page-teaching .subnav{
+    position:sticky; top:0;
+    padding:.5rem 1rem;
+    justify-content:center;
+  }
+
+  /* Closed trigger */
+  .page-teaching .subnav::after{
+    content:"Sections ▾";
+    display:inline-block;
+    padding:.4rem .75rem;
+    border-radius:999px;
+    background: rgba(12,18,24,.95);
+    border:1px solid rgba(255,255,255,.16);
+    box-shadow:0 8px 18px rgba(0,0,0,.25);
+    font-weight:700; color:#e8eef5;
+    cursor:pointer; user-select:none;
+  }
+  .page-teaching .subnav a{ display:none; }
+
+  /* Open panel */
+  .page-teaching .subnav:hover,
+  .page-teaching .subnav:focus-within{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:stretch;
+    background:#ffffff;
+    color:#0b1620;
+    border:1px solid rgba(0,0,0,.08);
+    border-radius:12px;
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+    padding:6px 0;
+    margin-left:auto;
+    margin-right:1rem;
+  }
+  .page-teaching .subnav:hover::after,
+  .page-teaching .subnav:focus-within::after{
+    content:"Sections ▲";
+    padding:10px 14px;
+    background:transparent; border:none; box-shadow:none; color:#0b1620;
+  }
+  .page-teaching .subnav:hover a,
+  .page-teaching .subnav:focus-within a{
+    display:block;
+    padding:10px 14px;
+    color:#0b1620;
+    white-space:nowrap;
+    min-width:var(--menu-min-width);
+  }
+  .page-teaching .subnav:hover a + a,
+  .page-teaching .subnav:focus-within a + a{
+    border-top:1px solid #f1f5f9;
+  }
 }
+
 
 /* ---------- Mobile header burger (existing) ---------- */
 /* (kept, but we ensure layering with z-index tweaks above) */
