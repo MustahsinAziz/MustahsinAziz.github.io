@@ -693,3 +693,32 @@ html{ scroll-behavior:smooth }
     text-align: left;
   }
 }
+/* === Research page: wider, justified, aligned with titles ================= */
+
+/* Research overview blurb */
+.page-portfolio #overview .intro-panel{
+  max-width: none;           /* override 900px cap */
+  margin: 1rem 0 0;          /* remove auto centering */
+  padding: 0;                /* align flush with the H1 */
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Job Market Paper abstract — covers whichever markup you used */
+.page-portfolio #jmp .intro-panel,
+.page-portfolio #jmp .jmp-intro,
+.page-portfolio #jmp > p{
+  max-width: none;
+  margin: .5rem 0 0;
+  padding: 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Optional: let just these two sections breathe a bit more on large screens */
+@media (min-width:1200px){
+  .page-portfolio #overview.section,
+  .page-portfolio #jmp.section{
+    max-width: 1240px;      /* bump over the site-wide 1100px container */
+  }
+}
