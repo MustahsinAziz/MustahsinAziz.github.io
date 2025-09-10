@@ -315,31 +315,7 @@ html{ scroll-behavior:smooth }
   color:#aab7c4; text-align:right;
 }
 
-/* --- Research overview tweaks --- */
-#overview .intro-panel {
-  text-align: left;       /* left-align research intro */
-  margin-left: 0;         /* align with section heading */
-  margin-right: auto;
-}
 
-/* --- Card-style button for Research Statement --- */
-.btn-card {
-  display: inline-block;
-  background: rgba(20,32,43,.9);          /* dark card background */
-  color: var(--link);                     /* light blue text */
-  padding: .65rem 1rem;
-  border-radius: 10px;
-  font-weight: 700;
-  border: 1px solid rgba(255,255,255,.12);
-  box-shadow: 0 6px 18px rgba(0,0,0,.25);
-  transition: background .15s ease, transform .15s ease;
-}
-
-.btn-card:hover {
-  text-decoration: none;
-  background: rgba(20,32,43,1);
-  transform: translateY(-2px);
-}
 
 /* ---------- CV page ---------- */
 .cv-section{
@@ -482,7 +458,31 @@ html{ scroll-behavior: smooth; }
   .hero h1{ font-size:2.2rem }
 }
 
+/* --- Research overview tweaks --- */
+#overview .intro-panel {
+  text-align: left;       /* left-align research intro */
+  margin-left: 0;         /* align with section heading */
+  margin-right: auto;
+}
 
+/* --- Card-style button for Research Statement --- */
+.btn-card {
+  display: inline-block;
+  background: rgba(20,32,43,1);          /* dark card background */
+  color: var(--link);                     /* light blue text */
+  padding: .65rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+  transition: background .15s ease, transform .15s ease;
+}
+
+.btn-card:hover {
+  text-decoration: none;
+  background: rgba(20,32,43,1);
+  transform: translateY(-2px);
+}
 
 /* ====== 1) Landing “lift”, 2) Mobile burger menu, 3) Scroll cue ========= */
 /* ======================================================================= */
